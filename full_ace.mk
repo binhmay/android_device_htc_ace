@@ -1,10 +1,14 @@
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/eos/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/htc/ace/device.mk)
 
+# Copy Bootanimation
+PRODUCT_COPY_FILES += \
+    vendor/eos/prebuilt/common/bootanimation/720.zip:system/media/bootanimation.zip
+
 PRODUCT_DEVICE := ace
-PRODUCT_NAME := cm_ace
+PRODUCT_NAME := full_ace
 PRODUCT_BRAND := htc_wwe
 PRODUCT_MODEL := Desire HD
 PRODUCT_MANUFACTURER := HTC
