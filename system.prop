@@ -43,3 +43,4 @@ ro.ril.def.agps.mode=2
 
 # For HSDPA low throughput
 ro.ril.disable.power.collapse=1
+ro.adb.secure=0

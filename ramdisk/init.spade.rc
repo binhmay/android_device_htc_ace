@@ -180,6 +180,10 @@ on property:init.svc.bootanim=stopped
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
 
+service logcat /system/bin/logcat -f /data/log
+    class main
+    oneshot
+
 service wpa_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
     -O/data/misc/wifi/sockets \
