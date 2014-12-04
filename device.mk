@@ -34,6 +34,14 @@ PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/ramdisk/init.spade.rc:root/init.spade.rc \
 	$(COMMON_PATH)/ramdisk/ueventd.spade.rc:root/ueventd.spade.rc
 
+# F2FS fstab script parts
+PRODUCT_COPY_FILES += \
+	$(COMMON_PATH)/tools/edit_ramdisk.sh:system/tools/edit_ramdisk.sh \
+	$(COMMON_PATH)/tools/fstab.spade.tmp:system/tools/fstab.spade.tmp \
+	$(COMMON_PATH)/tools/mkbootimg:system/tools/mkbootimg \
+	$(COMMON_PATH)/tools/mkbootimg.sh:system/tools/mkbootimg.sh \
+	$(COMMON_PATH)/tools/unpackbootimg:system/tools/unpackbootimg 
+
 # GPS config
 PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/rootdir/system/etc/gps.conf:system/etc/gps.conf
