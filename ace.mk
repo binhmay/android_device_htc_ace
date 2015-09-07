@@ -26,7 +26,9 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/ace/overlay
 COMMON_PATH := device/htc/ace
 
 # Boot ramdisk setup
-PRODUCT_PACKAGES += init.target.rc
+PRODUCT_PACKAGES += \
+    fstab.htc7x30 \
+    init.target.rc
 
 # Audio DSP Profiles
 PRODUCT_COPY_FILES += \
